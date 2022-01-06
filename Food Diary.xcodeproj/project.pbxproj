@@ -3,23 +3,32 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		93868BDB2784E83500CB31FD /* Food_DiaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93868BDA2784E83500CB31FD /* Food_DiaryApp.swift */; };
-		93868BDD2784E83500CB31FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93868BDC2784E83500CB31FD /* ContentView.swift */; };
+		93868BDD2784E83500CB31FD /* FoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93868BDC2784E83500CB31FD /* FoodView.swift */; };
 		93868BDF2784E83600CB31FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93868BDE2784E83600CB31FD /* Assets.xcassets */; };
 		93868BE22784E83600CB31FD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93868BE12784E83600CB31FD /* Preview Assets.xcassets */; };
+		93868BEB2784FA6A00CB31FD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 93868BEA2784FA6A00CB31FD /* Alamofire */; };
+		93868BED2784FABA00CB31FD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93868BEC2784FABA00CB31FD /* MainView.swift */; };
+		93868BEF2784FBAD00CB31FD /* MilkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93868BEE2784FBAD00CB31FD /* MilkView.swift */; };
+		93868BF12784FBBD00CB31FD /* PooView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93868BF02784FBBC00CB31FD /* PooView.swift */; };
+		93868BF32785006800CB31FD /* Sheety.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93868BF22785006800CB31FD /* Sheety.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		93868BD72784E83500CB31FD /* Food Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food Diary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93868BDA2784E83500CB31FD /* Food_DiaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food_DiaryApp.swift; sourceTree = "<group>"; };
-		93868BDC2784E83500CB31FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		93868BDC2784E83500CB31FD /* FoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodView.swift; sourceTree = "<group>"; };
 		93868BDE2784E83600CB31FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93868BE12784E83600CB31FD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		93868BE32784E83600CB31FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93868BEC2784FABA00CB31FD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		93868BEE2784FBAD00CB31FD /* MilkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilkView.swift; sourceTree = "<group>"; };
+		93868BF02784FBBC00CB31FD /* PooView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PooView.swift; sourceTree = "<group>"; };
+		93868BF22785006800CB31FD /* Sheety.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sheety.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93868BEB2784FA6A00CB31FD /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,10 +63,14 @@
 			isa = PBXGroup;
 			children = (
 				93868BDA2784E83500CB31FD /* Food_DiaryApp.swift */,
-				93868BDC2784E83500CB31FD /* ContentView.swift */,
+				93868BDC2784E83500CB31FD /* FoodView.swift */,
 				93868BDE2784E83600CB31FD /* Assets.xcassets */,
 				93868BE32784E83600CB31FD /* Info.plist */,
 				93868BE02784E83600CB31FD /* Preview Content */,
+				93868BEC2784FABA00CB31FD /* MainView.swift */,
+				93868BEE2784FBAD00CB31FD /* MilkView.swift */,
+				93868BF02784FBBC00CB31FD /* PooView.swift */,
+				93868BF22785006800CB31FD /* Sheety.swift */,
 			);
 			path = "Food Diary";
 			sourceTree = "<group>";
@@ -85,6 +99,9 @@
 			dependencies = (
 			);
 			name = "Food Diary";
+			packageProductDependencies = (
+				93868BEA2784FA6A00CB31FD /* Alamofire */,
+			);
 			productName = "Food Diary";
 			productReference = 93868BD72784E83500CB31FD /* Food Diary.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +129,9 @@
 				Base,
 			);
 			mainGroup = 93868BCE2784E83500CB31FD;
+			packageReferences = (
+				93868BE92784FA6A00CB31FD /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 93868BD82784E83500CB31FD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,7 +158,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93868BDD2784E83500CB31FD /* ContentView.swift in Sources */,
+				93868BDD2784E83500CB31FD /* FoodView.swift in Sources */,
+				93868BF32785006800CB31FD /* Sheety.swift in Sources */,
+				93868BF12784FBBD00CB31FD /* PooView.swift in Sources */,
+				93868BED2784FABA00CB31FD /* MainView.swift in Sources */,
+				93868BEF2784FBAD00CB31FD /* MilkView.swift in Sources */,
 				93868BDB2784E83500CB31FD /* Food_DiaryApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,7 +221,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -252,7 +276,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -328,6 +352,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		93868BE92784FA6A00CB31FD /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		93868BEA2784FA6A00CB31FD /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 93868BE92784FA6A00CB31FD /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 93868BCF2784E83500CB31FD /* Project object */;
 }
