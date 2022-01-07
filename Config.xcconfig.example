@@ -1,0 +1,13 @@
+//
+//  Config.xcconfig
+//  Food Diary
+//
+//  Created by Raoul on 07/01/2022.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+SHEETSU_URL = api.sheety.co/d2f60f465ab21dad931d05b55a9b7c1f/inesFoodDiary/sheet1
+SHEETSU_AUTHORIZATION = Bearer weiofawegawgpo3jkogijeoigjwpeokjgw
+CHILD_NAME = Inès

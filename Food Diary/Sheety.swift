@@ -7,6 +7,11 @@
 import Alamofire
 import Foundation
 
+func getConfigValueForKey(_ key: String) -> String? {
+    return (Bundle.main.infoDictionary?[key] as? String)?
+        .replacingOccurrences(of: "\\", with: "")
+}
+
 class Sheety {
     class func send(date: Date, category: String, type: String, note: String, callback:  @escaping () -> Void) -> Void {
         // Create Date Formatter
@@ -24,8 +29,8 @@ class Sheety {
         
         let parameters  = ["sheet1": data]
         
-        let authorization = ProcessInfo.processInfo.environment["SHEETSU_AUTHORIZATION"] ?? ""
-        let url = ProcessInfo.processInfo.environment["SHEETSU_URL"] ?? ""
+        let authorization = getConfigValueForKey("SHEETSU_AUTHORIZATION") ?? ""
+        let url = getConfigValueForKey("SHEETSU_URL") ?? ""
         
         let headers: HTTPHeaders = [
             "Authorization": authorization,

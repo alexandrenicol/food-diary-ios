@@ -27,7 +27,7 @@ struct MainView: View {
         }
     }
     
-    let childName  = ProcessInfo.processInfo.environment["CHILD_NAME"] ?? "Child"
+    let childName  = getConfigValueForKey("CHILD_NAME") ?? "Child"
     
     var body: some View {
         NavigationView {
